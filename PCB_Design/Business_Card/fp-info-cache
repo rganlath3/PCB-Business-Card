@@ -1,4 +1,4 @@
-24760038150433304
+24765288104511609
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -58372,6 +58372,27 @@ MODULE_TMC2209_SILENTSTEPSTICK
 0
 18
 18
+GanlathLib
+MountingHole_3.7mm_Core
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+2
+1
+GanlathLib
+MountingHole_3.7mm_Lanyard_Core
+Mounting Hole 3.7mm
+mounting hole 3.7mm
+0
+2
+1
+GanlathLib
+PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left
+surface-mounted straight pin header, 1x02, 2.54mm pitch, single row, style 1 (pin 1 left)
+Surface mounted pin header SMD 1x02 2.54mm single row style1 pin1 left
+0
+2
+2
 GanlathLib
 XIAO-nRF52840-DIP
 
