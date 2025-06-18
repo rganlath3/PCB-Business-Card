@@ -95,3 +95,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 The contents of this project itself is licensed under CERN-OHL-S-2.0 and the underlying source code is licensed under GNU GPLv3. Both of these licenses require attribution.
+
+<!-- SPECIAL THANKS -->
+## Special Thanks
+Special thanks to the following creators' github repos for inspiration and techniques used in this project:
+- River Wang: https://github.com/urfdvw/cardtuber
+- Anythony Kouttron: https://salvagedcircuitry.com/pcb-business-card.html
