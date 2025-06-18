@@ -42,7 +42,7 @@ The goal of this PCB is to create an artistic business card for conventions, mak
 <!-- PCB Design -->
 ### PCB Design
 <img src="/PCB_Design/Business_Card/PCB_TopView.png" width="800">
-<img src="/PCB_Design/Business_Card/PCB_BopttomView.png" width="800">
+<img src="/PCB_Design/Business_Card/PCB_BottomView.png" width="800">
 
 
 This PCB is used to interface a XIAO nRF5240 Sense with the following components:
@@ -60,21 +60,25 @@ With 4x buttons available along with a microphone input, a variety of things can
 I wanted to incorporate a menu system so I can toggle between different modes such as a battery readout display, static image display such as for a QR code, a looping GIF display, a sound reactive display mode, and a control mode to set ambient audio input levels. The limitation of all of this is the amount of flash memory on the XIAO nRF5240. For future revisions, I can incorporate a microSD card.
 
 #### Menu Display
-
+TBD
 
 #### Battery Readout Display
+TBD
 
 #### Static Image Display
+TBD
 
 #### Looping GIF Display
+TBD
 
 #### Sound Reactive Display
+TBD
 
 #### Ambient Audio Config Display
-
+TBD
 
 #### Game Display
-
+TBD
 
 <!-- CONTRIBUTING -->
 ## Contributing & Donations
