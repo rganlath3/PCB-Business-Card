@@ -60,7 +60,25 @@ With 4x buttons available along with a microphone input, a variety of things can
 I wanted to incorporate a menu system so I can toggle between different modes such as a battery readout display, static image display such as for a QR code, a looping GIF display, a sound reactive display mode, and a control mode to set ambient audio input levels. The limitation of all of this is the amount of flash memory on the XIAO nRF5240. For future revisions, I can incorporate a microSD card.
 
 #### Menu Display
-TBD
+- Call
+    - Snake
+    - Campbell
+    - Naomi
+    - Miller
+    - Liquid
+    - Otacon
+    - Sniper Wolf
+    - Meryl
+    - Mei Ling
+    - Nastasha
+    - Deepthroat
+- Receive Call
+- Animated
+    - Campbell
+    - Otacon
+- Settings
+    - Brightness
+    - Restart System
 
 #### Battery Readout Display
 TBD

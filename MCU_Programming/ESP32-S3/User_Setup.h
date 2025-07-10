@@ -211,11 +211,11 @@
 // The hardware SPI can be mapped to any pins
 
 #define TFT_MISO 13
-#define TFT_MOSI 11
-#define TFT_SCLK 12
-#define TFT_CS   10  // Chip select control pin
-#define TFT_DC    6  // Data Command control pin
-#define TFT_RST   7  // Reset pin (could connect to RST pin)
+#define TFT_MOSI 35
+#define TFT_SCLK 36
+#define TFT_CS   5  // Chip select control pin
+#define TFT_DC   37  // Data Command control pin
+#define TFT_RST  16  // Reset pin (could connect to RST pin)
 //#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST
 
 // For ESP32 Dev board (only tested with GC9A01 display)
@@ -226,7 +226,7 @@
 //#define TFT_CS   5  // Chip select control pin
 //#define TFT_DC   27  // Data Command control pin
 //#define TFT_RST  33  // Reset pin (could connect to Arduino RESET pin)
-//#define TFT_BL   22  // LED back-light
+//#define TFT_BL   6  // LED back-light
 
 //#define TOUCH_CS 21     // Chip select pin (T_CS) of touch screen
 
@@ -363,7 +363,7 @@
 // #define SPI_FREQUENCY  20000000
 #define SPI_FREQUENCY  27000000
 // #define SPI_FREQUENCY  40000000
-// #define SPI_FREQUENCY  55000000 // STM32 SPI1 only (SPI2 maximum is 27MHz)
+//#define SPI_FREQUENCY  55000000 // STM32 SPI1 only (SPI2 maximum is 27MHz)
 // #define SPI_FREQUENCY  80000000
 
 // Optional reduced SPI frequency for reading TFT
