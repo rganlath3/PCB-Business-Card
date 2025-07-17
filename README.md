@@ -71,14 +71,28 @@ I wanted to incorporate a menu system so I can toggle between different modes su
     - Meryl
     - Mei Ling
     - Nastasha
-    - Deepthroat
-- Receive Call
+    - Dt
+- Incoming Call
 - Animated
+    - Snake
     - Campbell
+    - Naomi
+    - Miller
     - Otacon
+    - Sniper Wolf
+    - Meryl
+    - Mei Ling
+    - Nastasha
 - Settings
     - Brightness
     - Restart System
+- QR
+    - QR code for this project
+    - QR code for my LinkedIn
+    - QR code for my github
+- Games
+    - TBD
+- Sleep
 
 #### Battery Readout Display
 TBD
