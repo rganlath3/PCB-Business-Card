@@ -1,6 +1,6 @@
 /*
   By Ranil Ganlath
-  This is for testing basic menus with the IPS Display and the QT Py ESP32-S3 with No PSRAM.
+  This is for testing bitmaps with menu with the IPS Display and the QT Py ESP32-S3 with No PSRAM.
   ESP32-S3 GPIO18 - Pushbutton, Down
   ESP32-S3 GPIO17 - Pushbutton, Up
   ESP32-S3 GPIO9 - Pushbutton, Select
@@ -37,7 +37,42 @@
 
 
 #include <TFT_eSPI.h>       // Hardware-specific library
+
+//Add Bitmap Images
+#include "CAMPBELL.h"
+#include "CAMPBELLM.h"
+#include "DEEPTHROAT.h"
+#include "LIQUID.h"
+#include "MEILING.h"
+#include "MEILINGB.h"
+#include "MEILINGM.h"
+#include "MERYL.h"
+#include "MERYLB.h"
+#include "MERYLM.h"
+#include "MILLER.h"
+#include "MILLERM.h"
+#include "NAOMI.h"
+#include "NAOMIB.h"
+#include "NAOMIM.h"
+#include "NASTASHA.h"
+#include "NASTASHAB.h"
+#include "NASTASHAM.h"
+#include "OTACON.h"
+#include "OTACONB.h"
+#include "OTACONM.h"
+#include "SNAKE.h"
+#include "SNAKEB.h"
+#include "SNAKEM.h"
+#include "SNIPERWOLF.h"
+#include "SNIPERWOLFB.h"
+#include "SNIPERWOLFM.h"
+
+
+
+
+
 TFT_eSPI tft = TFT_eSPI(135,240);  // Invoke custom library
+
 
 // Menu structure definitions
 struct MenuItem {
@@ -83,8 +118,8 @@ MenuItem callItems[] = {
 };
 
 MenuItem animatedItems[] = {
-  {"CAMPBELL", 0, nullptr, true},
-  {"OTACON", 0, nullptr, true}
+  {"An CAMPBELL", 0, nullptr, true},
+  {"An OTACON", 0, nullptr, true}
 };
 
 MenuItem settingsItems[] = {
@@ -291,6 +326,7 @@ void handleDownButton() {
 
 void executeAction(String actionName) {
   // Clear screen and show action
+
   tft.fillScreen(ColorCodecBG );
   tft.setTextColor(ColorCodecMainText );
   tft.setTextSize(2);
@@ -309,33 +345,70 @@ void executeAction(String actionName) {
     delay(2000);
     tft.setCursor(5, 130);
     tft.println("Connected!");
-  } else if (actionName == "System Info") {
-    tft.println("ESP32-S3 Info:");
-    tft.setCursor(5, 130);
-    tft.println("Free Heap: " + String(ESP.getFreeHeap()));
-    tft.setCursor(5, 150);
-    tft.println("CPU Freq: " + String(ESP.getCpuFreqMHz()) + " MHz");
+  } else if (actionName == "SNAKE") {
+    tft.pushImage(0,0,140,240,SNAKE);
+  } else if (actionName == "CAMPBELL") {
+    tft.pushImage(0,0,140,240,CAMPBELL);
+  } else if (actionName == "NAOMI") {
+    tft.pushImage(0,0,140,240,NAOMI);
+  } else if (actionName == "MILLER") {
+    tft.pushImage(0,0,140,240,MILLER);
+  } else if (actionName == "LIQUID") {
+    tft.pushImage(0,0,140,240,LIQUID);
+  } else if (actionName == "OTACON") {
+    tft.pushImage(0,0,140,240,OTACON);
+  } else if (actionName == "SNIPER WOLF") {
+    tft.pushImage(0,0,140,240,SNIPERWOLF);
+  } else if (actionName == "MERYL") {
+    tft.pushImage(0,0,140,240,MERYL);
+  } else if (actionName == "MEI LING") {
+    tft.pushImage(0,0,140,240,MEILING);
+  } else if (actionName == "NASTASHA") {
+    tft.pushImage(0,0,140,240,NASTASHA);
+  } else if (actionName == "DEEPTHROAT") {
+    tft.pushImage(0,0,140,240,DEEPTHROAT);
+  } else if (actionName == "An CAMPBELL") {
+    tft.pushImage(0,0,140,240,CAMPBELL);
+    delay(2000);
+    tft.pushImage(27,92,91,91,CAMPBELLM);
+    delay(2000);
+    tft.pushImage(0,0,140,240,CAMPBELL);
+    delay(2000);
+    tft.pushImage(27,92,91,91,CAMPBELLM);
+    //I want to loop this animation until a button is pressed.
+  } else if (actionName == "An OTACON") {
+    tft.pushImage(0,0,140,240,OTACON);
+    //do more here
+  } else if (actionName == "Brightness") {
+    //adjust backlight pwm
   } else if (actionName == "Restart System") {
     tft.println("Restarting in 3 seconds...");
     delay(3000);
     ESP.restart();
-  } else if (actionName == "Temperature") {
-    tft.println("Temperature: 25.6°C");
-  } else if (actionName == "Exit") {
+  } else if (actionName == "Sleep") {
     tft.fillScreen(ColorCodecBG );
     tft.setTextColor(ColorCodecMainText );
     tft.setTextSize(2);
     tft.setCursor(20, 100);
     tft.println("Goodbye!");
     delay(2000);
+    //DO ESP SLEEP HERE, setup button input for power on.
+  } else if (actionName == "Business Card") {
+    delay(2000);
+    //do more here
+  } else if (actionName == "LinkedIn") {
+    delay(2000);
+    //do more here
+  } else if (actionName == "Github") {
+    delay(2000);
+    //do more here
+  } else if (actionName == "Incoming Call") {
+    delay(2000);
+    //do more here
   } else {
     tft.println("Action completed!");
   }
   
-  // Wait for button press to continue
-  tft.setTextColor(ColorCodecTextNote );
-  tft.setCursor(5, 200);
-  tft.println("Press any button to continue");
   
   // Wait for button release first
   while (digitalRead(selectButton) || digitalRead(menuButton) || 
